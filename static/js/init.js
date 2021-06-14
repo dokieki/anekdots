@@ -1,6 +1,4 @@
 function initDialog(dialog) {
-    console.log('Init dialog');
-
     dialog.showModal();
 
     dialog.addEventListener('click', function(event) {
@@ -105,7 +103,8 @@ async function loadAnekdots(tag, limit, offset = 0) {
 			this.classList.add('active');
 
 			window.currentTag = this.dataset.index;
-			loadAnekdots(this.dataset.index, 20);
+			window.currentPage = 1;
+			loadAnekdots(this.dataset.index, 20, window.currentPage, 0);
 		}
 	}
 })();
