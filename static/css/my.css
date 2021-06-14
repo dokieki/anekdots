@@ -1,0 +1,7 @@
+:root {
+	--primary-color: #231e23;
+	--theme: #231e23;
+	--header-background: var(--theme);
+	--background: #EEE;
+	--text-color: white;
+}

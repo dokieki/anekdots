@@ -1,0 +1,139 @@
+header {
+	font-family: 'Roboto-Light';
+	background: var(--header-background);
+	height: 56px;
+	transition: .4s;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	position: relative;
+}
+
+header div.header-container {
+	width: 90%;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header div.header-container h1 {
+	color: var(--text-color);
+	font-weight: 100;
+	transition: .3s;
+}
+
+header div.header-container h1 a {
+	text-decoration: none;
+	color: var(--text-color);
+	font-weight: 100;
+}
+
+header div.header-container ul {
+    list-style: none;
+    width: auto;
+    height: 100%;
+}
+
+header div.header-container ul li {
+	display: inline-block;
+    cursor: pointer;
+    transition: .5s;
+    padding: 7px;
+    height: 75%;
+    min-width: 2em;
+	color: var(--text-color);
+	text-transform: uppercase;
+	font-family: 'Roboto-Medium';
+	user-select: none;
+}
+
+header div.header-container ul li * {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header div.header-container ul li div.header-li-container {
+	width: 100%;
+    height: 100%;
+    transition: .3s;
+    border-radius: 100%;
+	position: relative;
+	font-family: 'Roboto-Medium';
+}
+
+header div.header-container ul li a.header-li-container {
+	transition: .3s;
+	position: relative;
+}
+
+div.header-notif {
+	position: absolute;
+    font-family: 'Roboto-Medium';
+    font-size: 13px;
+    top: 0px;
+    right: -5px;
+    border: 2px solid var(--theme);
+    border-radius: 10px;
+    min-width: 1.2em;
+    background: var(--primary-color);
+    color: white !important;
+    padding: 1px;
+    user-select: none;
+    text-align: center;
+}
+
+header div.header-container ul li.header-avatar {
+	margin-left: 1em;
+	float: right;
+}
+
+header div.header-container ul li.header-avatar img {
+	border-radius: 100%;
+	object-fit: cover;
+	width: 36px;
+	height: 36px;
+	transition: .5s;
+}
+
+header div.header-container ul li * {
+	color: var(--header-text-color);
+}
+
+header div.header-container ul li svg {
+	color: rgba(0, 0, 0, .6);
+	transform: scale(1);
+}
+
+header div.header-container ul li a.header-li-container:active,
+header div.header-container ul li div.header-li-container:active {
+	opacity: .5;
+	transform: scale(.98);
+}
+
+@media screen and (max-width: 780px) {
+
+	header div.header-container {
+		width: 95%;
+	}
+
+	header div.header-container h1 {
+		font-size: 16px;
+	}
+
+	header div.header-container ul li {
+		font-size: 12px;
+		margin-left: .5em;
+	}
+}
+
+@media screen and (max-width: 290px) {
+	header div.header-container h1 {
+		font-size: 22px;
+	}
+
+	header div.header-container ul {
+		display: none !important;
+	}
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/my.css">
+
+	<link rel="stylesheet" type="text/css" href="/css/components/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/components/tag.css">
+	<link rel="stylesheet" type="text/css" href="/css/components/anekdot.css">
+	<link rel="stylesheet" type="text/css" href="/css/components/loading.css">
+	<link rel="stylesheet" type="text/css" href="/css/components/dialog.css">
+	<link rel="stylesheet" type="text/css" href="/css/components/pagination.css">
+
+	<link rel="stylesheet" type="text/css" href="/css/pages/index.css">
+
+	<title>Anekdots xD</title>
+
+	<script type="text/javascript" src="https://unpkg.com/feather-icons"></script>
+	
+	<script type="module" src="/js/init.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header-container">
+			<h1>dokieki's anekdots</h1>
+			<ul>
+				<li>
+					<div class="header-li-container" id="random-anekdot-act">Случайный анекдот</div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<div id="main">
+		<div id="main-container">
+			<div class="main-header">
+				<% for (let i = 0; i < it.atags.length; ++i) { %>
+				<div class="tag clickable" data-index="<%= i %>"><%= it.atags[i] %></div>
+				<% } %>
+			</div>
+			<div class="main-header">
+				<div id="pagination">
+					<div id="pagination-back" class="pagination-icon">
+						<i data-feather="chevron-left"></i>
+					</div>
+					<div id="pagination-next" class="pagination-icon">
+						<i data-feather="chevron-right"></i>
+					</div>
+				</div>
+			</div>
+			<div id="anekdots">
+				<% for (let anekdot of it.anekdots) { %>
+				<div class="anekdot">
+					<div class="anekdot-data">
+						<span><%~ anekdot.content.replace(/\\n/g, '<br>') %></span>
+					</div>
+				</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+
+	<dialog id="random-anekdot">
+		<div id="random-anekdot-footer" style="height: 4em"></div>
+		<div id="random-anekdot-content"></div>
+	</dialog>
+</body>
+</html>

@@ -1,0 +1,85 @@
+@font-face {
+	src: url('./fonts/Roboto-Light.ttf');
+	font-family: 'Roboto-Light';
+}
+
+@font-face {
+	src: url('./fonts/Roboto-LightItalic.ttf');
+	font-family: 'Roboto-LightItalic';
+}
+
+@font-face {
+	src: url('./fonts/Roboto-Medium.ttf');
+	font-family: 'Roboto-Medium';
+}
+
+img, svg, button, h1 {
+    user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: inherit;
+	font-family: 'Roboto-Light';
+	scrollbar-color: white black !important;
+	scrollbar-width: thin !important;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+ 
+*::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .2);
+}
+
+*:focus {
+    outline: 0 !important;
+}
+
+*:disabled + *:before {
+	border-color: rgba(0, 0, 0, .05) !important;
+    color: rgba(0, 0, 0, .3) !important;
+    background: #c9c9c9 !important;
+}
+
+a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+a.decor {
+    color: #0d6efd;
+}
+
+a.decor:visited {
+	color: #6610f2;
+}
+
+img.emoji {
+    display: inline-block;
+    width: 15px;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background: var(--background);
+}
+
+body {
+	overflow-y: scroll;
+}

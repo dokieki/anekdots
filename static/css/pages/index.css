@@ -1,0 +1,33 @@
+div#main {
+	width: 100%;
+	height: 100%;
+	background: var(--background);
+}
+
+div#main div#main-container {
+	margin: auto;
+	padding: 1em;
+	width: 90%;
+	min-height: 100%;
+	background: white;
+	border-left: 1px solid rgba(0, 0, 0, .2);
+	border-right: 1px solid rgba(0, 0, 0, .2);
+	padding-bottom: 1em;
+}
+
+div#main div#main-container div.main-header {
+	width: 100%;
+	min-height: 3em;
+	padding-bottom: 1em;
+}
+
+div#anekdots {
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width: 780px) {
+	div#main div#main-container {
+		width: 96%;
+	}
+}

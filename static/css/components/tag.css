@@ -1,0 +1,52 @@
+div.tag {
+	display: inline-block;
+	padding: 5px;
+	background: rgba(0, 0, 0, .1);
+	color: rgba(0, 0, 0, .5);
+	border-radius: 5px;
+	min-width: 2em;
+	text-align: center;
+	font-size: 14px;
+	transition: .3s;
+	margin-left: 5px;
+	margin-top: 5px;
+	cursor: default;
+}
+
+div.tag span {
+	margin-top: 5px;
+	float: left;
+	font-family: 'Roboto-Medium';
+}
+
+div.tag.clickable {
+	cursor: pointer;
+	user-select: none;
+}
+
+div.tag.clickable.active {
+	background: var(--primary-color);
+	color: white;
+}
+
+div.tag div.icon {
+	float: right;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+}
+
+div.tag div.icon img {
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+div.tag div.icon {
+	transform: scale(.65);
+}
+
+div.tag.clickable:active {
+	transform: scale(.97);
+}

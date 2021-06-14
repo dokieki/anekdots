@@ -1,0 +1,11 @@
+div.anekdot {
+	min-height: 3em;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	padding-bottom: .5em;
+	padding-top: 1em;
+	transition: .3s;
+}
+
+div.anekdot-data {
+	padding-bottom: .5em;
+}

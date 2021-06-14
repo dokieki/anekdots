@@ -1,0 +1,25 @@
+div.pagination-icon {
+	display: inline-block;
+	width: 1.5em;
+	padding: 10px;
+	border-radius: 100%;
+	transition: .3s;
+	cursor: pointer;
+} 
+
+div.pagination-icon svg {
+	transform: scale(1.2);
+	color: rgba(0, 0, 0, .4);
+}
+
+div#pagination-back {
+	float: left;
+}
+
+div#pagination-next {
+	float: right;
+}
+
+div.pagination-icon:active {
+	transform: scale(.9);
+}

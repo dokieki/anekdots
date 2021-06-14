@@ -1,0 +1,17 @@
+{
+  "name": "anekdotov.net",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^7.4.1",
+    "cookie-parser": "^1.4.5",
+    "eta": "^1.12.2",
+    "express": "^4.17.1"
+  }
+}

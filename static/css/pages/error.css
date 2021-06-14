@@ -1,0 +1,14 @@
+body {
+	background: var(--background);
+}
+
+pre {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 40%;
+}
+
+pre *, code * {
+	font-family: monospace;
+}
