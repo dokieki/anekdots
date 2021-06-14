@@ -27,10 +27,12 @@ app.use('*', function(req, res, next) {
 
 app.get('/', async function(req, res) {
     let anekdots = db.prepare('SELECT * FROM anek WHERE category = 1 LIMIT 20').all();
+    let count = db.prepare('SELECT COUNT(*) FROM anek WHERE category = 1').get();
 
     res.render('index', {
         atags: constants.tags,
-        anekdots: anekdots
+        anekdots: anekdots,
+        count: count['COUNT(*)']
     });
 });
 

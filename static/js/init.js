@@ -27,7 +27,6 @@ async function loadAnekdots(tag, limit, offset = 0) {
 	
 	let anekdots = await fetch(`/api/v1/by_category?${params}`);
 		anekdots = await anekdots.json();
-		anekdots = anekdots.response;
 
 	if (anekdots.length <= 0) {
 		anekdotsContainer.innerHTML = 'Анекдоты по этому тегу кончились :(';
@@ -36,6 +35,11 @@ async function loadAnekdots(tag, limit, offset = 0) {
 	}
 
 	anekdotsContainer.innerHTML = '';
+
+	console.log(anekdots)
+	document.getElementById('pagination-count').innerHTML = anekdots.count;
+
+	anekdots = anekdots.response;
 
 	for (let anekdot of anekdots) {
 		anekdotsContainer.innerHTML += `

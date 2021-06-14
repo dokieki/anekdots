@@ -1,3 +1,7 @@
+div#pagination {
+	text-align: center;
+}
+
 div.pagination-icon {
 	display: inline-block;
 	width: 1.5em;
@@ -14,6 +18,13 @@ div.pagination-icon svg {
 
 div#pagination-back {
 	float: left;
+}
+
+div#pagination-count {
+	display: inline-block;
+	width: fit-content;
+	height: fit-content;
+	font-family: 'Roboto-Medium';
 }
 
 div#pagination-next {

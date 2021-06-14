@@ -16,6 +16,7 @@ router.get('/by_category', function(req, res) {
 		response: null
 	});
 
+	let count = res.db.prepare('SELECT COUNT(*) FROM anek WHERE category = ?').get(Number(req.query.category) + 1);
 	let anek = res.db.prepare('SELECT * FROM anek WHERE category = ? LIMIT ? OFFSET ?').all(
 		Number(req.query.category) + 1,
 		req.query.limit,
@@ -23,7 +24,8 @@ router.get('/by_category', function(req, res) {
 	);
 
 	res.json({
-		response: anek
+		response: anek,
+		count: count['COUNT(*)']
 	})
 });
 
